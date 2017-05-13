@@ -1,0 +1,524 @@
+<style>
+  /* start css.sty */
+  .cmr-10x-x-109{}
+  .cmsy-10x-x-109{}
+  .cmr-8{font-size:72%;}
+  .cmmi-10x-x-109{font-style: italic;}
+  .cmmi-8{font-size:72%;font-style: italic;}
+  .cmsy-8{font-size:72%;}
+  .cmex-10x-x-109{}
+  .eusm-10x-x-109{}
+  p.noindent { text-indent: 0em }
+  td p.noindent { text-indent: 0em; margin-top:0em; }
+  p.nopar { text-indent: 0em; }
+  p.indent{ text-indent: 1.5em }
+  @media print {div.crosslinks {visibility:hidden;}}
+  a img { border-top: 0; border-left: 0; border-right: 0; }
+  center { margin-top:1em; margin-bottom:1em; }
+  td center { margin-top:0em; margin-bottom:0em; }
+  .Canvas { position:relative; }
+  img.math{vertical-align:middle;}
+  li p.indent { text-indent: 0em }
+  li p:first-child{ margin-top:0em; }
+  li p:last-child, li div:last-child { margin-bottom:0.5em; }
+  li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+  .enumerate1 {list-style-type:decimal;}
+  .enumerate2 {list-style-type:lower-alpha;}
+  .enumerate3 {list-style-type:lower-roman;}
+  .enumerate4 {list-style-type:upper-alpha;}
+  div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+  .obeylines-h,.obeylines-v {white-space: nowrap; }
+  div.obeylines-v p { margin-top:0; margin-bottom:0; }
+  .overline{ text-decoration:overline; }
+  .overline img{ border-top: 1px solid black; }
+  td.displaylines {text-align:center; white-space:nowrap;}
+  .centerline {text-align:center;}
+  .rightline {text-align:right;}
+  div.verbatim {font-family: monospace; white-space: nowrap; text-align:left; clear:both; }
+  .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+  div.fbox {display:table}
+  div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+  div.minipage{width:100%;}
+  div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+  div.center div {text-align: left;}
+  div.flushright, div.flushright div.flushright {text-align: right;}
+  div.flushright div {text-align: left;}
+  div.flushleft {text-align: left;}
+  .underline{ text-decoration:underline; }
+  .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+  .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+  .framebox-c {text-align:center;}
+  .framebox-l {text-align:left;}
+  .framebox-r {text-align:right;}
+  span.thank-mark{ vertical-align: super }
+  span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+  div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+  table.tabular td p{margin-top:0em;}
+  table.tabular {margin-left: auto; margin-right: auto;}
+  td p:first-child{ margin-top:0em; }
+  td p:last-child{ margin-bottom:0em; }
+  div.td00{ margin-left:0pt; margin-right:0pt; }
+  div.td01{ margin-left:0pt; margin-right:5pt; }
+  div.td10{ margin-left:5pt; margin-right:0pt; }
+  div.td11{ margin-left:5pt; margin-right:5pt; }
+  table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+  td.td00{ padding-left:0pt; padding-right:0pt; }
+  td.td01{ padding-left:0pt; padding-right:5pt; }
+  td.td10{ padding-left:5pt; padding-right:0pt; }
+  td.td11{ padding-left:5pt; padding-right:5pt; }
+  table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+  .hline hr, .cline hr{ height : 1px; margin:0px; }
+  .tabbing-right {text-align:right;}
+  span.TEX {letter-spacing: -0.125em; }
+  span.TEX span.E{ position:relative;top:0.5ex;left:-0.0417em;}
+  a span.TEX span.E {text-decoration: none; }
+  span.LATEX span.A{ position:relative; top:-0.5ex; left:-0.4em; font-size:85%;}
+  span.LATEX span.TEX{ position:relative; left: -0.4em; }
+  div.float, div.figure {margin-left: auto; margin-right: auto;}
+  div.float img {text-align:center;}
+  div.figure img {text-align:center;}
+  .marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+  .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+  table.equation {width:100%;}
+  .equation td{text-align:center; }
+  td.equation { margin-top:1em; margin-bottom:1em; }
+  td.equation-label { width:5%; text-align:center; }
+  td.eqnarray4 { width:5%; white-space: normal; }
+  td.eqnarray2 { width:5%; }
+  table.eqnarray-star, table.eqnarray {width:100%;}
+  div.eqnarray{text-align:center;}
+  div.array {text-align:center;}
+  div.pmatrix {text-align:center;}
+  table.pmatrix {width:100%;}
+  span.pmatrix img{vertical-align:middle;}
+  div.pmatrix {text-align:center;}
+  table.pmatrix {width:100%;}
+  span.bar-css {text-decoration:overline;}
+  img.cdots{vertical-align:middle;}
+  .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+  .index-item, .index-subitem, .index-subsubitem {display:block}
+  div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+  div.caption span.id{font-weight: bold; white-space: nowrap; }
+  h1.partHead{text-align: center}
+  p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+  p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+  .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+  .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+  .quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; margin-right:1em; text-align:justify;}
+  .verse{white-space:nowrap; margin-left:2em}
+  div.maketitle {text-align:center;}
+  h2.titleHead{text-align:center;}
+  div.maketitle{ margin-bottom: 2em; }
+  div.author, div.date {text-align:center;}
+  div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+  div.author{white-space: nowrap;}
+  .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
+  .abstract p {margin-left:5%; margin-right:5%;}
+  div.abstract {width:100%;}
+  .equation td{text-align:center; }
+  .equation-star td{text-align:center; }
+  table.equation-star { width:100%; }
+  table.equation { width:100%; }
+  table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:100%; margin-left:5%; white-space: nowrap;}
+  table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
+  td.align-label { width:5%; text-align:center; }
+  td.align-odd { text-align:right; padding-right:0.3em;}
+  td.align-even { text-align:left; padding-right:0.6em;}
+  table.multline, table.multline-star {width:100%;}
+  td.gather {text-align:center; }
+  table.gather {width:100%;}
+  div.gather-star {text-align:center;}
+  dd.enumerate {margin-left: 2em;}
+  dt.enumerate {float:left; clear:left; margin-right:0.5em; margin-left:0.5em; text-align:right; }
+  .figure img.graphics {margin-left:10%;}
+  div.algorithm table.caption { border-bottom: 1px solid black; margin-bottom:1pt; }
+  div.algorithmic span.algorithmic{white-space:pre}
+  dt.enumerate-enumitem{float:left; clear:left; margin-left:1em; margin-right:1em;}
+  /* end css.sty */
+</style>
+<ul class="itemize1">
+  <li class="itemize">If <span
+    class="cmmi-10x-x-109">G </span><span
+    class="cmsy-10x-x-109">&#x2208;</span> <span
+    class="eusm-10x-x-109"><img
+    src="./assets/repo/imgs/eusm10-52.png" alt="R" class="10-109x-x-52" /></span>(3<span
+    class="cmmi-10x-x-109">,k</span>), then &#x0394;(<span
+    class="cmmi-10x-x-109">G</span>) <span
+    class="cmmi-10x-x-109">&#x003C; k</span>
+    <!--l. 42--><p class="noindent" >because all neighborhoods of <span
+      class="cmmi-10x-x-109">G </span>are independent
+  </li>
+  <li class="itemize"><span
+    class="cmmi-10x-x-109">G</span><sub><span
+    class="cmmi-8">v</span></sub> is a (3<span
+    class="cmmi-10x-x-109">,k </span><span
+    class="cmsy-10x-x-109">- </span>1;<span
+    class="cmmi-10x-x-109">n </span><span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">deg</span>(<span
+    class="cmmi-10x-x-109">v</span>) <span
+    class="cmsy-10x-x-109">- </span>1<span
+    class="cmmi-10x-x-109">,e</span>(<span
+    class="cmmi-10x-x-109">G</span>) <span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">Z</span>(<span
+    class="cmmi-10x-x-109">v</span>)) graph
+    <!--l. 46--><p class="noindent" >because all remaining vertices in <span
+      class="cmmi-10x-x-109">G</span><sub><span
+      class="cmmi-8">v</span></sub> are independent of <span
+      class="cmmi-10x-x-109">v </span>in <span
+      class="cmmi-10x-x-109">G</span>
+  </li>
+  <li class="itemize">If <span
+    class="cmmi-10x-x-109">G </span>has <span
+    class="cmmi-10x-x-109">n</span><sub><span
+    class="cmmi-8">i</span></sub> vertices of degree <span
+    class="cmmi-10x-x-109">i</span>, then
+    <table
+      class="align-star">
+      <tr><td
+        class="align-odd"><span
+        class="cmmi-10x-x-109">&#x03B3;</span>(<span
+        class="cmmi-10x-x-109">G</span>)</td>        <td
+        class="align-even"> = <span
+        class="cmex-10x-x-109">&#x2211;</span>
+        <sub><span
+          class="cmmi-8">v</span><span
+          class="cmsy-8">&#x2208;</span><span
+          class="cmmi-8">V </span><span
+          class="cmr-8">(</span><span
+          class="cmmi-8">G</span><span
+          class="cmr-8">)</span></sub><span
+          class="cmmi-10x-x-109">&#x03B3;</span>(<span
+          class="cmmi-10x-x-109">v</span>)</td>                                                                                                <td
+        class="align-odd"></td>           <td
+        class="align-even"></td>        <td
+        class="align-label"></td>        <td
+        class="align-label">
+      </td></tr><tr><td
+      class="align-odd"></td>              <td
+      class="align-even"> = <span
+      class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">v</span><span
+        class="cmsy-8">&#x2208;</span><span
+        class="cmmi-8">V </span><span
+        class="cmr-8">(</span><span
+        class="cmmi-8">G</span><span
+        class="cmr-8">)</span></sub><span class="big"><img
+        src="./assets/repo/imgs/prelim/comp150_project0x.png" alt="["  class="left" align="middle"></span><span
+        class="cmmi-10x-x-109">e </span><span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">Z</span>(<span
+        class="cmmi-10x-x-109">v</span>) <span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">e</span>(3<span
+        class="cmmi-10x-x-109">,k </span><span
+        class="cmsy-10x-x-109">- </span>1;<span
+        class="cmmi-10x-x-109">n </span><span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">deg</span>(<span
+        class="cmmi-10x-x-109">v</span>) <span
+        class="cmsy-10x-x-109">- </span>1)<span class="big"><img
+        src="./assets/repo/imgs/prelim/comp150_project1x.png" alt="]"  class="left" align="middle"></span></td>                                                  <td
+      class="align-odd"></td>           <td
+      class="align-even"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label">
+    </td></tr><tr><td
+      class="align-odd"></td>              <td
+      class="align-even"> = <span
+      class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">v</span><span
+        class="cmsy-8">&#x2208;</span><span
+        class="cmmi-8">V </span><span
+        class="cmr-8">(</span><span
+        class="cmmi-8">G</span><span
+        class="cmr-8">)</span></sub><span class="big"><img
+        src="./assets/repo/imgs/prelim/comp150_project2x.png" alt="["  class="left" align="middle"></span><span
+        class="cmmi-10x-x-109">e </span><span
+        class="cmsy-10x-x-109">-</span><span
+        class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmsy-8">{</span><span
+        class="cmmi-8">u,v</span><span
+        class="cmsy-8">}&#x2208;</span><span
+        class="cmmi-8">E</span><span
+        class="cmr-8">(</span><span
+        class="cmmi-8">G</span><span
+        class="cmr-8">)</span></sub><span
+        class="cmmi-10x-x-109">deg</span>(<span
+        class="cmmi-10x-x-109">u</span>) <span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">e</span>(3<span
+        class="cmmi-10x-x-109">,k </span><span
+        class="cmsy-10x-x-109">- </span>1;<span
+        class="cmmi-10x-x-109">n </span><span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">deg</span>(<span
+        class="cmmi-10x-x-109">v</span>) <span
+        class="cmsy-10x-x-109">- </span>1)<span class="big"><img
+        src="./assets/repo/imgs/prelim/comp150_project3x.png" alt="]"  class="left" align="middle"></span></td>                              <td
+      class="align-odd"></td>           <td
+      class="align-even"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label">
+    </td></tr><tr><td
+      class="align-odd"></td>              <td
+      class="align-even"> = <span
+      class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">v</span><span
+        class="cmsy-8">&#x2208;</span><span
+        class="cmmi-8">V </span><span
+        class="cmr-8">(</span><span
+        class="cmmi-8">G</span><span
+        class="cmr-8">)</span></sub><span
+        class="cmmi-10x-x-109">e </span><span
+        class="cmsy-10x-x-109">-</span><span
+        class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">v</span><span
+        class="cmsy-8">&#x2208;</span><span
+        class="cmmi-8">V </span><span
+        class="cmr-8">(</span><span
+        class="cmmi-8">G</span><span
+        class="cmr-8">)</span></sub> <span
+        class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmsy-8">{</span><span
+        class="cmmi-8">u,v</span><span
+        class="cmsy-8">}&#x2208;</span><span
+        class="cmmi-8">E</span><span
+        class="cmr-8">(</span><span
+        class="cmmi-8">G</span><span
+        class="cmr-8">)</span></sub><span
+        class="cmmi-10x-x-109">deg</span>(<span
+        class="cmmi-10x-x-109">u</span>) <span
+        class="cmsy-10x-x-109">-</span><span
+        class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">v</span><span
+        class="cmsy-8">&#x2208;</span><span
+        class="cmmi-8">V G</span></sub><span
+        class="cmmi-10x-x-109">e</span>(3<span
+        class="cmmi-10x-x-109">,k </span><span
+        class="cmsy-10x-x-109">- </span>1;<span
+        class="cmmi-10x-x-109">n </span><span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">deg</span>(<span
+        class="cmmi-10x-x-109">v</span>) <span
+        class="cmsy-10x-x-109">- </span>1)</td>        <td
+      class="align-odd">(<span
+      class="cmmi-10x-x-109">a</span>)</td>        <td
+      class="align-even"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label">
+    </td></tr><tr><td
+      class="align-odd"></td>              <td
+      class="align-even"> = <span
+      class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">v</span><span
+        class="cmsy-8">&#x2208;</span><span
+        class="cmmi-8">V </span><span
+        class="cmr-8">(</span><span
+        class="cmmi-8">G</span><span
+        class="cmr-8">)</span></sub><span
+        class="cmmi-10x-x-109">e </span><span
+        class="cmsy-10x-x-109">-</span><span
+        class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">n</span><sub><span
+        class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">i</span><sup><span
+        class="cmr-8">2</span></sup> <span
+        class="cmsy-10x-x-109">-</span><span
+        class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">v</span><span
+        class="cmsy-8">&#x2208;</span><span
+        class="cmmi-8">V G</span></sub><span
+        class="cmmi-10x-x-109">e</span>(3<span
+        class="cmmi-10x-x-109">,k </span><span
+        class="cmsy-10x-x-109">- </span>1;<span
+        class="cmmi-10x-x-109">n </span><span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">deg</span>(<span
+        class="cmmi-10x-x-109">v</span>) <span
+        class="cmsy-10x-x-109">- </span>1)</td>                                    <td
+      class="align-odd">(<span
+      class="cmmi-10x-x-109">b</span>)</td>        <td
+      class="align-even"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label">
+    </td></tr><tr><td
+      class="align-odd"></td>              <td
+      class="align-even"> = <span
+      class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">v</span><span
+        class="cmsy-8">&#x2208;</span><span
+        class="cmmi-8">V </span><span
+        class="cmr-8">(</span><span
+        class="cmmi-8">G</span><span
+        class="cmr-8">)</span></sub><span
+        class="cmmi-10x-x-109">e </span><span
+        class="cmsy-10x-x-109">-</span><span
+        class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">n</span><sub><span
+        class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">i</span><sup><span
+        class="cmr-8">2</span></sup> <span
+        class="cmsy-10x-x-109">-</span><span
+        class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">n</span><sub><span
+        class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">e</span>(3<span
+        class="cmmi-10x-x-109">,k </span><span
+        class="cmsy-10x-x-109">- </span>1;<span
+        class="cmmi-10x-x-109">n </span><span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">i </span><span
+        class="cmsy-10x-x-109">- </span>1)</td>                                               <td
+      class="align-odd">(<span
+      class="cmmi-10x-x-109">c</span>)</td>        <td
+      class="align-even"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label">
+    </td></tr><tr><td
+      class="align-odd"></td>              <td
+      class="align-even"> = <span
+      class="cmmi-10x-x-109">ne </span><span
+      class="cmsy-10x-x-109">-</span><span
+      class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">n</span><sub><span
+        class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">i</span><sup><span
+        class="cmr-8">2</span></sup> + <span
+        class="cmmi-10x-x-109">n</span><sub>
+<span
+  class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">e</span>(3<span
+        class="cmmi-10x-x-109">,k </span><span
+        class="cmsy-10x-x-109">- </span>1;<span
+        class="cmmi-10x-x-109">n </span><span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">i </span><span
+        class="cmsy-10x-x-109">- </span>1)</td>                                                                <td
+      class="align-odd"></td>           <td
+      class="align-even"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label">
+    </td></tr><tr><td
+      class="align-odd"></td>              <td
+      class="align-even"> = <span
+      class="cmmi-10x-x-109">ne </span><span
+      class="cmsy-10x-x-109">-</span><span
+      class="cmex-10x-x-109">&#x2211;</span>
+      <sub><span
+        class="cmmi-8">i</span></sub><span
+        class="cmmi-10x-x-109">n</span><sub><span
+        class="cmmi-8">i</span></sub>(<span
+        class="cmmi-10x-x-109">i</span><sup><span
+        class="cmr-8">2</span></sup> + <span
+        class="cmmi-10x-x-109">e</span>(3<span
+        class="cmmi-10x-x-109">,k </span><span
+        class="cmsy-10x-x-109">- </span>1;<span
+        class="cmmi-10x-x-109">n </span><span
+        class="cmsy-10x-x-109">- </span><span
+        class="cmmi-10x-x-109">i </span><span
+        class="cmsy-10x-x-109">- </span>1))</td>                                                                <td
+      class="align-odd">(4)</td>        <td
+      class="align-even"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label"></td>        <td
+      class="align-label">  </td></tr></table>
+    Step (<span
+      class="cmmi-10x-x-109">a</span>) <span
+      class="cmsy-10x-x-109">&#x2192; </span>(<span
+      class="cmmi-10x-x-109">b</span>) is justified because, in the summation of all neighborhoods, every vertex of degree <span
+      class="cmmi-10x-x-109">d</span>
+
+
+    will be counted exactly <span
+      class="cmmi-10x-x-109">d </span>times- once for each of its neighbors. So, each vertex of degree <span
+      class="cmmi-10x-x-109">d</span>
+    contributes (<span
+      class="cmmi-10x-x-109">d</span><sup><span
+      class="cmr-8">2</span></sup>) to the sum, and there are <span
+      class="cmmi-10x-x-109">n</span><sub><span
+      class="cmmi-8">d</span></sub> vertices of degree <span
+      class="cmmi-10x-x-109">d</span>.
+    <!--l. 63--><p class="noindent" >Step (<span
+      class="cmmi-10x-x-109">b</span>) <span
+      class="cmsy-10x-x-109">&#x2192; </span>(<span
+      class="cmmi-10x-x-109">c</span>) is justified because, in the summation, the structure of <span
+      class="cmmi-10x-x-109">G </span>is irrelevant. All that
+      matters is how many vertices there are of a particular degree, as the <span
+        class="cmmi-10x-x-109">e</span>(<span
+        class="cmmi-10x-x-109">&#x2026;</span>) term will be identical for
+      all vertices of identical degree.
+      <!--l. 66--><p class="noindent" >(4) is helpful because it allows us to calculate <span
+      class="cmmi-10x-x-109">&#x03B3;</span>(<span
+      class="cmmi-10x-x-109">G</span>) from only the degree sequence of <span
+      class="cmmi-10x-x-109">G</span>, rather than
+      having to look at each neighborhood in <span
+        class="cmmi-10x-x-109">G </span>itself. (4) is referenced in several of the proofs
+      below.
+  </li>
+  <li class="itemize"><span
+    class="cmmi-10x-x-109">n </span>= <span
+    class="cmex-10x-x-109">&#x2211;</span>
+    <sub><span
+      class="cmmi-8">i</span><span
+      class="cmr-8">=0</span></sub><sup><span
+      class="cmmi-8">k</span><span
+      class="cmsy-8">-</span><span
+      class="cmr-8">1</span></sup><span
+      class="cmmi-10x-x-109">n</span><sub><span
+      class="cmmi-8">i</span></sub>
+  </li>
+  <li class="itemize">2<span
+    class="cmmi-10x-x-109">e </span>= <span
+    class="cmex-10x-x-109">&#x2211;</span>
+    <sub><span
+      class="cmmi-8">i</span><span
+      class="cmr-8">=0</span></sub><sup><span
+      class="cmmi-8">k</span><span
+      class="cmsy-8">-</span><span
+      class="cmr-8">1</span></sup><span
+      class="cmmi-10x-x-109">in</span><sub><span
+      class="cmmi-8">i</span></sub>
+  </li>
+  <li class="itemize">For all <span
+    class="cmmi-10x-x-109">n,k </span><span
+    class="cmsy-10x-x-109">&#x2265; </span>1 for which <span
+    class="cmmi-10x-x-109">e</span>(3<span
+    class="cmmi-10x-x-109">,k,n</span>) is finite
+    <table
+      class="equation-star"><tr><td>
+      <center class="math-display" >
+        <img
+          src="./assets/repo/imgs/prelim/comp150_project4x.png" alt="               (
+               ||0          if n &#x2264; k
+               ||||n - k      if k &#x003C; n &#x2264; 2k
+               {
+e(3,k + 1,n) = |3n - 5k    if 2k &#x003C; n &#x2264; 5k &#x2215;2
+               ||||5n - 10k   if 5k &#x2215;2 &#x003C; n &#x2264; 3k
+               |(6n - 13k   if 3k &#x003C; n &#x2264; 13k &#x2215;4- 1
+     " class="math-display" ></center></td></tr></table>
+    <!--l. 82--><p class="nopar" >
+      (These results are derived in other papers that we did not read, but which are referenced in
+      Goedgebeur and Radziszowski.)</li></ul>

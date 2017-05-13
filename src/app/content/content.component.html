@@ -1,0 +1,21 @@
+<div fxFlex>
+  <md-card fxFlex>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <button md-icon-button (click)="backward()"><md-icon>chevron_left</md-icon></button>
+      <span fxFlex></span>
+      <span fxLayoutAlign="center center"><b>{{title}}</b></span>
+      <span fxFlex></span>
+      <button md-icon-button (click)="forward()"><md-icon>chevron_right</md-icon></button>
+    </div>
+    <md-card-content *ngIf="snippets" style="max-height: 525px; overflow: auto" #scrollContainer>
+      <div *ngFor="let snippet of snippets">
+        <app-snippet templateUrl="{{snippet}}"></app-snippet>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>
+<div fxFlex="50" *ngIf="hasImg" fxFlexOffset="20px" [@enterAnimation]="hasImg">
+  <md-card style="position: fixed; top: 81px">
+    <img src="{{imgSrc}}" height="auto" width="auto" style="max-height: 100%; max-width: 100%">
+  </md-card>
+</div>

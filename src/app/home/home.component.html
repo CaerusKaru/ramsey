@@ -1,0 +1,22 @@
+<div fxFlexFill fxLayoutAlign="center start" style="padding: 32px">
+  <md-card fxFlex="215px">
+    <nav-menu-container>
+      <nav-menu-header label="Upper Bound">
+        <nav-menu-link link="section/0/0">1. Introduction</nav-menu-link>
+        <nav-menu-link link="section/1/0">2. Definitions</nav-menu-link>
+        <nav-menu-toggle label="3. Proof">
+          <nav-menu-link link="section/2/0">i. Prelim. Results</nav-menu-link>
+          <nav-menu-link link="section/2/1">ii. Theorem 3</nav-menu-link>
+          <nav-menu-link link="section/2/2">iii. Theorem 4</nav-menu-link>
+          <nav-menu-link link="section/2/3">iii. Theorem 6</nav-menu-link>
+        </nav-menu-toggle>
+      </nav-menu-header>
+      <!--<nav-menu-header label="Lower Bound">-->
+        <!--<nav-menu-link link="section/4/0">1. Simulated Annealing</nav-menu-link>-->
+      <!--</nav-menu-header>-->
+    </nav-menu-container>
+  </md-card>
+  <div fxFlex fxFlexFill fxFlexOffset="16px">
+    <router-outlet></router-outlet>
+  </div>
+</div>

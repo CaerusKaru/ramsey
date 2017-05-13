@@ -1,0 +1,4 @@
+@import 'app-theme';
+
+@include nav-theme($theme);
+@include dark-text($theme);

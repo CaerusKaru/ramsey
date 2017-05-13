@@ -1,0 +1,255 @@
+{
+  "sections": [
+    {
+      "title": "Introduction",
+      "subsections": [
+        {
+          "snippets": [
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Definitions",
+      "subsections": [
+        {
+          "snippets": [
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Proof",
+      "subsections": [
+        {
+          "title": "Preliminary Results",
+          "snippets": [
+            {
+              "hasImg": false
+            }
+          ]
+        },
+        {
+          "title": "Theorem 3",
+          "snippets": [
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_01.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_02.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_03.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_04.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_04.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_05.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_06.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_07.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_08.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_09.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_10.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_10.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_11.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_12.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_13.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_14.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm3/thm3_14.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Theorem 4",
+          "snippets": [
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_0.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_1.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_2.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_3.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_4.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_4.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_4.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_tbl_0.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_tbl_1.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_tbl_2.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_tbl_3.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_tbl_4.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_tbl_5.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm4/thm4_tbl_6.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Theorem 6",
+          "snippets": [
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm6/thm6_00.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm6/thm6_01.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm6/thm6_01.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm6/thm6_02.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm6/thm6_03.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm6/thm6_04.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm6/thm6_05.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm6/thm6_06.jpg"
+            },
+            {
+              "hasImg": true,
+              "imgSrc": "./assets/repo/imgs/thm6/thm6_07.jpg"
+            },
+            {
+              "hasImg": false
+            },
+            {
+              "hasImg": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

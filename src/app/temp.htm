@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><title>Derivation of R(3,10) &#x2264; 42</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link rel="stylesheet" type="text/css" href="comp150_project.css">
+</head>
+<body>
+<div class="maketitle">
+  <h2 class="titleHead">Derivation of R(3, 10) &#x2264; 42</h2>
+  <div class="author"><span class="cmr-12">David Stalfa &amp; Adam Plumer</span></div>
+  <br/>
+  <div class="date"></div>
+</div>
+<p class="noindent">
+  <span class="cmti-10x-x-109">from </span>
+  Goedgebeur, Radziszowski &#8220;New Computational Upper Bounds for Ramsey Numbers
+  <span class="cmmi-10x-x-109">R</span>(3
+  <span class="cmmi-10x-x-109">,k</span>
+  )&#8221;
+<h3 class="likesectionHead"><a id="x1-1000"></a>Introduction</h3>
+<!--l. 43--><p class="noindent">Explanation of Ramsey numbers.
+  <!--l. 46-->
+<p class="noindent">Derive upper and lower bounds for R(3,10). For a overview of the proof technique used to derive the
+  upper
+  bounds, see our proof that R(3,4) is less than 10.
+  <!--l. 50-->
+<p class="noindent">Read as preparation for reading source material, which includes more results.
+  <!--l. 53-->
+<p class="noindent">
+<h3 class="likesectionHead"><a
+  id="x1-2000"></a>Definitions</h3>
+<!--l. 55-->
+<p class="noindent">Graphs
+  <ul class="itemize1">
+    <li class="itemize">For any graph <span
+      class="cmmi-10x-x-109">G</span>
+      <ul class="itemize2">
+        <li class="itemize"><span
+          class="cmmi-10x-x-109">V </span>(<span
+          class="cmmi-10x-x-109">G</span>) is the vertex set of <span
+          class="cmmi-10x-x-109">G</span>
+        </li>
+        <li class="itemize"><span
+          class="cmmi-10x-x-109">E</span>(<span
+          class="cmmi-10x-x-109">G</span>) is the edge set of <span
+          class="cmmi-10x-x-109">G</span>
+        </li>
+        <li class="itemize"><span
+          class="cmmi-10x-x-109">e</span>(<span
+          class="cmmi-10x-x-109">G</span>) is the number of edges in <span
+          class="cmmi-10x-x-109">G</span>
+        </li>
+        <li class="itemize">For any vertex <span
+          class="cmmi-10x-x-109">v </span>of <span
+          class="cmmi-10x-x-109">G</span>
+          <ul class="itemize3">
+            <li class="itemize"><span
+              class="cmmi-10x-x-109">N</span>(<span
+              class="cmmi-10x-x-109">v</span>) (or <span
+              class="cmmi-10x-x-109">N</span><sub><span
+              class="cmmi-8">v</span></sub>(<span
+              class="cmmi-10x-x-109">G</span>)) is the set of neighbors of <span
+              class="cmmi-10x-x-109">v</span>
+
+
+            </li>
+            <li class="itemize"><span
+              class="cmmi-10x-x-109">deg</span><sub><span
+              class="cmmi-8">v</span></sub>(<span
+              class="cmmi-10x-x-109">G</span>) is the degree of <span
+              class="cmmi-10x-x-109">v</span></li>
+          </ul>
+        </li>
+        <li class="itemize"><span
+          class="cmmi-10x-x-109">&#x03B1;</span>(<span
+          class="cmmi-10x-x-109">G</span>) is the size of the largest independent set in <span
+          class="cmmi-10x-x-109">G</span>
+          <!--l. 69-->
+<p class="noindent">(or, its independence number)
+  </li>
+<li class="itemize"><span
+  class="cmmi-10x-x-109">&#x03B4;</span>(<span
+  class="cmmi-10x-x-109">G</span>) is the minimum degree of any vertex in <span
+  class="cmmi-10x-x-109">G</span>
+</li>
+<li class="itemize">&#x0394;(<span
+  class="cmmi-10x-x-109">G</span>) is the maximum degree of any vertex in <span
+  class="cmmi-10x-x-109">G</span></li>
+</ul>
+</li></ul>
+<!--l. 76-->
+<p class="noindent">Ramsey numbers
+  <ul class="itemize1">
+    <li class="itemize">For positive integers <span
+      class="cmmi-10x-x-109">j </span>and <span
+      class="cmmi-10x-x-109">k</span>
+      <ul class="itemize2">
+        <li class="itemize"><span
+          class="cmmi-10x-x-109">R</span>(<span
+          class="cmmi-10x-x-109">j,k</span>) = <span
+          class="cmmi-10x-x-109">n </span>iff every graph with <span
+          class="cmmi-10x-x-109">n </span>or more vertices has either a <span
+          class="cmmi-10x-x-109">j </span>clique or an independent
+          set of size <span
+            class="cmmi-10x-x-109">k</span>
+        </li>
+        <li class="itemize">A (<span
+          class="cmmi-10x-x-109">j,k</span>;<span
+          class="cmmi-10x-x-109">n,e</span>) graph is a graph of <span
+          class="cmmi-10x-x-109">n </span>vertices and <span
+          class="cmmi-10x-x-109">e </span>edges in which there is no <span
+          class="cmmi-10x-x-109">j </span>clique or
+          set of <span
+            class="cmmi-10x-x-109">k </span>independent vertices
+          <!--l. 83-->
+<p class="noindent">a (<span
+  class="cmmi-10x-x-109">j,k</span>) graph is a graph with no <span
+  class="cmmi-10x-x-109">j </span>clique or set of <span
+  class="cmmi-10x-x-109">k </span>independent vertices
+  <!--l. 85-->
+<p class="noindent">a (<span
+  class="cmmi-10x-x-109">j,k</span>;<span
+  class="cmmi-10x-x-109">n</span>) graph is a graph with <span
+  class="cmmi-10x-x-109">n </span>vertices in which there is no <span
+  class="cmmi-10x-x-109">j </span>clique or set of <span
+  class="cmmi-10x-x-109">k</span>
+  independent vertices
+  </li>
+<li class="itemize"><span
+  class="eusm-10x-x-109"><img
+  src="eusm10-52.png" alt="R" class="10-109x-x-52"/></span>(<span
+  class="cmmi-10x-x-109">j,k</span>;<span
+  class="cmmi-10x-x-109">n,e</span>) is the set of all (<span
+  class="cmmi-10x-x-109">j,k</span>;<span
+  class="cmmi-10x-x-109">n,e</span>) graphs
+</li>
+<li class="itemize">Any (<span
+  class="cmmi-10x-x-109">j,k</span>;<span
+  class="cmmi-10x-x-109">R</span>(<span
+  class="cmmi-10x-x-109">j,k</span>) <span
+  class="cmsy-10x-x-109">- </span>1) graph is <span
+  class="cmti-10x-x-109">critical </span>for (<span
+  class="cmmi-10x-x-109">j,k</span>)
+  <!--l. 91--><p class="noindent">That is, in order to establish that <span
+    class="cmmi-10x-x-109">R</span>(<span
+    class="cmmi-10x-x-109">j,k</span>) = <span
+    class="cmmi-10x-x-109">m</span>, we must construct a (<span
+    class="cmmi-10x-x-109">j,k</span>;<span
+    class="cmmi-10x-x-109">m </span><span
+    class="cmsy-10x-x-109">- </span>1) graph
+    (as well as prove that <span
+      class="cmmi-10x-x-109">R</span>(<span
+      class="cmmi-10x-x-109">j,k</span>) <span
+      class="cmmi-10x-x-109">&#x003C; m </span>+ 1)</li>
+</ul>
+</li></ul>
+<!--l. 95-->
+<p class="noindent">Minimal edges/graph structure
+  <ul class="itemize1">
+    <li class="itemize"><span
+      class="cmmi-10x-x-109">e</span>(<span
+      class="cmmi-10x-x-109">j,k,n</span>) is the minimum number of edges in any (<span
+      class="cmmi-10x-x-109">j,k</span>;<span
+      class="cmmi-10x-x-109">n</span>) graph
+      <!--l. 99-->
+<p class="noindent">(or <span
+  class="cmsy-10x-x-109">&#x221E; </span>if no such graph exists)
+  </li>
+  <li class="itemize"><span
+    class="cmmi-10x-x-109">Z</span>(<span
+    class="cmmi-10x-x-109">v</span>) (or <span
+    class="cmmi-10x-x-109">Z</span><sub><span
+    class="cmmi-8">G</span></sub>(<span
+    class="cmmi-10x-x-109">v</span>)) is the sum of the degrees of all neighbors of <span
+    class="cmmi-10x-x-109">v </span>in <span
+    class="cmmi-10x-x-109">G</span>
+    <!--l. 103-->
+<p class="noindent"><span
+  class="cmmi-10x-x-109">Z</span>(<span
+  class="cmmi-10x-x-109">v</span>) = <span
+  class="cmmi-10x-x-109">Z</span><sub><span
+  class="cmmi-8">G</span></sub>(<span
+  class="cmmi-10x-x-109">v</span>) = <span
+  class="cmex-10x-x-109">&#x2211;</span>
+  <sub><span
+    class="cmsy-8">{</span><span
+    class="cmmi-8">u,v</span><span
+    class="cmsy-8">}&#x2208;</span><span
+    class="cmmi-8">E</span><span
+    class="cmr-8">(</span><span
+    class="cmmi-8">G</span><span
+    class="cmr-8">)</span></sub><span
+    class="cmmi-10x-x-109">deg</span>(<span
+    class="cmmi-10x-x-109">v</span>)
+  </li>
+  <li class="itemize">If <span
+    class="cmmi-10x-x-109">G </span><span
+    class="cmsy-10x-x-109">&#x2208; </span><span
+    class="eusm-10x-x-109"><img
+    src="eusm10-52.png" alt="R" class="10-109x-x-52"/></span>(3<span
+    class="cmmi-10x-x-109">,k</span>), then &#x0394;(<span
+    class="cmmi-10x-x-109">G</span>) <span
+    class="cmmi-10x-x-109">&#x003C; k</span>
+    <!--l. 107-->
+<p class="noindent">because all neighborhoods of <span
+  class="cmmi-10x-x-109">G </span>are independent
+
+
+  </li>
+  <li class="itemize">For any (3<span
+    class="cmmi-10x-x-109">,k</span>;<span
+    class="cmmi-10x-x-109">n,e</span>) graph <span
+    class="cmmi-10x-x-109">G</span>
+    <ul class="itemize2">
+      <li class="itemize"><span
+        class="cmmi-10x-x-109">G</span><sub><span
+        class="cmmi-8">v</span></sub> is the graph induced in <span
+        class="cmmi-10x-x-109">G </span>by the set <span
+        class="cmmi-10x-x-109">V </span>(<span
+        class="cmmi-10x-x-109">G</span>) <span
+        class="cmsy-10x-x-109">- </span>(<span
+        class="cmmi-10x-x-109">N</span><sub><span
+        class="cmmi-8">G</span></sub>(<span
+        class="cmmi-10x-x-109">v</span>) <span
+        class="cmsy-10x-x-109">&#x222A;{</span><span
+        class="cmmi-10x-x-109">v</span><span
+        class="cmsy-10x-x-109">}</span>)
+      </li>
+      <li class="itemize"><span
+        class="cmmi-10x-x-109">&#x03B3;</span>(<span
+        class="cmmi-10x-x-109">v</span>) is the deficiency of vertex <span
+        class="cmmi-10x-x-109">v</span>
+        <!--l. 115-->
+<p class="noindent"><span
+  class="cmmi-10x-x-109">&#x03B3;</span>(<span
+  class="cmmi-10x-x-109">v</span>) = <span
+  class="cmmi-10x-x-109">e </span><span
+  class="cmsy-10x-x-109">- </span><span
+  class="cmmi-10x-x-109">Z</span>(<span
+  class="cmmi-10x-x-109">v</span>) <span
+  class="cmsy-10x-x-109">- </span><span
+  class="cmmi-10x-x-109">e</span>(3<span
+  class="cmmi-10x-x-109">,k </span><span
+  class="cmsy-10x-x-109">- </span>1;<span
+  class="cmmi-10x-x-109">n </span><span
+  class="cmsy-10x-x-109">- </span><span
+  class="cmmi-10x-x-109">deg</span>(<span
+  class="cmmi-10x-x-109">v</span>) <span
+  class="cmsy-10x-x-109">- </span>1) <span
+  class="cmsy-10x-x-109">&#x2265; </span>0
+  <!--l. 117-->
+<p class="noindent">In other words, the number of edges in the induced graph <span
+  class="cmmi-10x-x-109">G</span><sub><span
+  class="cmmi-8">v</span></sub> are at least as large as the
+  minimum number of edges in a graph of that type
+  </li>
+  <li class="itemize"><span
+    class="cmmi-10x-x-109">&#x03B3;</span>(<span
+    class="cmmi-10x-x-109">G</span>) is the deficiency of the graph
+    <!--l. 121-->
+<p class="noindent"><span
+  class="cmmi-10x-x-109">&#x03B3;</span>(<span
+  class="cmmi-10x-x-109">G</span>) = <span
+  class="cmex-10x-x-109">&#x2211;</span>
+  <sub><span
+    class="cmmi-8">v</span><span
+    class="cmsy-8">&#x2208;</span><span
+    class="cmmi-8">V </span><span
+    class="cmr-8">(</span><span
+    class="cmmi-8">G</span><span
+    class="cmr-8">)</span></sub><span
+    class="cmmi-10x-x-109">&#x03B3;</span>(<span
+    class="cmmi-10x-x-109">v</span>)</li></ul>
+  </li></ul>
+  <!--l. 127-->
+<p class="noindent">
+<h3 class="likesectionHead"><a
+  id="x1-3000"></a>Preliminary results</h3>
+<ul class="itemize1">
+  <li class="itemize"><span
+    class="cmmi-10x-x-109">G</span><sub><span
+    class="cmmi-8">v</span></sub> is a (3<span
+    class="cmmi-10x-x-109">,k </span><span
+    class="cmsy-10x-x-109">- </span>1;<span
+    class="cmmi-10x-x-109">n </span><span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">deg</span>(<span
+    class="cmmi-10x-x-109">v</span>) <span
+    class="cmsy-10x-x-109">- </span>1<span
+    class="cmmi-10x-x-109">,e</span>(<span
+    class="cmmi-10x-x-109">G</span>) <span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">Z</span>(<span
+    class="cmmi-10x-x-109">v</span>)) graph
+    <!--l. 131--><p class="noindent">because all remaining vertices in <span
+      class="cmmi-10x-x-109">G</span><sub><span
+      class="cmmi-8">v</span></sub> are independent of <span
+      class="cmmi-10x-x-109">v </span>in <span
+      class="cmmi-10x-x-109">G</span>
+  </li>
+  <li class="itemize">If <span
+    class="cmmi-10x-x-109">G </span>is a (3<span
+    class="cmmi-10x-x-109">,k</span>) graph and <span
+    class="cmmi-10x-x-109">H </span>is a subgraph of <span
+    class="cmmi-10x-x-109">G </span>with <span
+    class="cmmi-10x-x-109">n </span>vertices, then <span
+    class="cmmi-10x-x-109">&#x03B4;</span>(<span
+    class="cmmi-10x-x-109">H</span>) <span
+    class="cmsy-10x-x-109">&#x2264; </span><span
+    class="cmmi-10x-x-109">n&#x2215;</span>2.
+  </li>
+  <li class="itemize">If <span
+    class="cmmi-10x-x-109">G </span>has <span
+    class="cmmi-10x-x-109">n</span><sub><span
+    class="cmmi-8">i</span></sub> vertices of degree <span
+    class="cmmi-10x-x-109">i</span>, then
+
+
+    <table
+      class="align-star">
+      <tr>
+        <td
+          class="align-odd"><span
+          class="cmmi-10x-x-109">&#x03B3;</span>(<span
+          class="cmmi-10x-x-109">G</span>)
+        </td>
+        <td
+          class="align-even"> = <span
+          class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">v</span><span
+            class="cmsy-8">&#x2208;</span><span
+            class="cmmi-8">V </span><span
+            class="cmr-8">(</span><span
+            class="cmmi-8">G</span><span
+            class="cmr-8">)</span></sub><span
+            class="cmmi-10x-x-109">&#x03B3;</span>(<span
+            class="cmmi-10x-x-109">v</span>)
+        </td>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label">
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"> = <span
+          class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">v</span><span
+            class="cmsy-8">&#x2208;</span><span
+            class="cmmi-8">V </span><span
+            class="cmr-8">(</span><span
+            class="cmmi-8">G</span><span
+            class="cmr-8">)</span></sub><span class="big"><img
+            src="comp150_project0x.png" alt="[" class="left" align="middle"></span><span
+            class="cmmi-10x-x-109">e </span><span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">Z</span>(<span
+            class="cmmi-10x-x-109">v</span>) <span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">e</span>(3<span
+            class="cmmi-10x-x-109">,k </span><span
+            class="cmsy-10x-x-109">- </span>1;<span
+            class="cmmi-10x-x-109">n </span><span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">deg</span>(<span
+            class="cmmi-10x-x-109">v</span>) <span
+            class="cmsy-10x-x-109">- </span>1)<span class="big"><img
+            src="comp150_project1x.png" alt="]" class="left" align="middle"></span></td>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label">
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"> = <span
+          class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">v</span><span
+            class="cmsy-8">&#x2208;</span><span
+            class="cmmi-8">V </span><span
+            class="cmr-8">(</span><span
+            class="cmmi-8">G</span><span
+            class="cmr-8">)</span></sub><span class="big"><img
+            src="comp150_project2x.png" alt="[" class="left" align="middle"></span><span
+            class="cmmi-10x-x-109">e </span><span
+            class="cmsy-10x-x-109">-</span><span
+            class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmsy-8">{</span><span
+            class="cmmi-8">u,v</span><span
+            class="cmsy-8">}&#x2208;</span><span
+            class="cmmi-8">E</span><span
+            class="cmr-8">(</span><span
+            class="cmmi-8">G</span><span
+            class="cmr-8">)</span></sub><span
+            class="cmmi-10x-x-109">deg</span>(<span
+            class="cmmi-10x-x-109">u</span>) <span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">e</span>(3<span
+            class="cmmi-10x-x-109">,k </span><span
+            class="cmsy-10x-x-109">- </span>1;<span
+            class="cmmi-10x-x-109">n </span><span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">deg</span>(<span
+            class="cmmi-10x-x-109">v</span>) <span
+            class="cmsy-10x-x-109">- </span>1)<span class="big"><img
+            src="comp150_project3x.png" alt="]" class="left" align="middle"></span></td>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label">
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"> = <span
+          class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">v</span><span
+            class="cmsy-8">&#x2208;</span><span
+            class="cmmi-8">V </span><span
+            class="cmr-8">(</span><span
+            class="cmmi-8">G</span><span
+            class="cmr-8">)</span></sub><span
+            class="cmmi-10x-x-109">e </span><span
+            class="cmsy-10x-x-109">-</span><span
+            class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">v</span><span
+            class="cmsy-8">&#x2208;</span><span
+            class="cmmi-8">V </span><span
+            class="cmr-8">(</span><span
+            class="cmmi-8">G</span><span
+            class="cmr-8">)</span></sub> <span
+            class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmsy-8">{</span><span
+            class="cmmi-8">u,v</span><span
+            class="cmsy-8">}&#x2208;</span><span
+            class="cmmi-8">E</span><span
+            class="cmr-8">(</span><span
+            class="cmmi-8">G</span><span
+            class="cmr-8">)</span></sub><span
+            class="cmmi-10x-x-109">deg</span>(<span
+            class="cmmi-10x-x-109">u</span>) <span
+            class="cmsy-10x-x-109">-</span><span
+            class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">v</span><span
+            class="cmsy-8">&#x2208;</span><span
+            class="cmmi-8">V G</span></sub><span
+            class="cmmi-10x-x-109">e</span>(3<span
+            class="cmmi-10x-x-109">,k </span><span
+            class="cmsy-10x-x-109">- </span>1;<span
+            class="cmmi-10x-x-109">n </span><span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">deg</span>(<span
+            class="cmmi-10x-x-109">v</span>) <span
+            class="cmsy-10x-x-109">- </span>1)
+        </td>
+        <td
+          class="align-odd">(1)
+        </td>
+        <td
+          class="align-even"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label">
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"> = <span
+          class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">v</span><span
+            class="cmsy-8">&#x2208;</span><span
+            class="cmmi-8">V </span><span
+            class="cmr-8">(</span><span
+            class="cmmi-8">G</span><span
+            class="cmr-8">)</span></sub><span
+            class="cmmi-10x-x-109">e </span><span
+            class="cmsy-10x-x-109">-</span><span
+            class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">n</span><sub><span
+            class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">i</span><sup><span
+            class="cmr-8">2</span></sup> <span
+            class="cmsy-10x-x-109">-</span><span
+            class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">v</span><span
+            class="cmsy-8">&#x2208;</span><span
+            class="cmmi-8">V G</span></sub><span
+            class="cmmi-10x-x-109">e</span>(3<span
+            class="cmmi-10x-x-109">,k </span><span
+            class="cmsy-10x-x-109">- </span>1;<span
+            class="cmmi-10x-x-109">n </span><span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">deg</span>(<span
+            class="cmmi-10x-x-109">v</span>) <span
+            class="cmsy-10x-x-109">- </span>1)
+        </td>
+        <td
+          class="align-odd">(2)
+        </td>
+        <td
+          class="align-even"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label">
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"> = <span
+          class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">v</span><span
+            class="cmsy-8">&#x2208;</span><span
+            class="cmmi-8">V </span><span
+            class="cmr-8">(</span><span
+            class="cmmi-8">G</span><span
+            class="cmr-8">)</span></sub><span
+            class="cmmi-10x-x-109">e </span><span
+            class="cmsy-10x-x-109">-</span><span
+            class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">n</span><sub><span
+            class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">i</span><sup><span
+            class="cmr-8">2</span></sup> <span
+            class="cmsy-10x-x-109">-</span><span
+            class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">n</span><sub><span
+            class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">e</span>(3<span
+            class="cmmi-10x-x-109">,k </span><span
+            class="cmsy-10x-x-109">- </span>1;<span
+            class="cmmi-10x-x-109">n </span><span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">i </span><span
+            class="cmsy-10x-x-109">- </span>1)
+        </td>
+        <td
+          class="align-odd">(3)
+        </td>
+        <td
+          class="align-even"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label">
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"> = <span
+          class="cmmi-10x-x-109">ne </span><span
+          class="cmsy-10x-x-109">-</span><span
+          class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">n</span><sub><span
+            class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">i</span><sup><span
+            class="cmr-8">2</span></sup> + <span
+            class="cmmi-10x-x-109">n</span><sub>
+<span
+  class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">e</span>(3<span
+            class="cmmi-10x-x-109">,k </span><span
+            class="cmsy-10x-x-109">- </span>1;<span
+            class="cmmi-10x-x-109">n </span><span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">i </span><span
+            class="cmsy-10x-x-109">- </span>1)
+        </td>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label">
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-odd"></td>
+        <td
+          class="align-even"> = <span
+          class="cmmi-10x-x-109">ne </span><span
+          class="cmsy-10x-x-109">-</span><span
+          class="cmex-10x-x-109">&#x2211;</span>
+          <sub><span
+            class="cmmi-8">i</span></sub><span
+            class="cmmi-10x-x-109">n</span><sub><span
+            class="cmmi-8">i</span></sub>(<span
+            class="cmmi-10x-x-109">i</span><sup><span
+            class="cmr-8">2</span></sup> + <span
+            class="cmmi-10x-x-109">e</span>(3<span
+            class="cmmi-10x-x-109">,k </span><span
+            class="cmsy-10x-x-109">- </span>1;<span
+            class="cmmi-10x-x-109">n </span><span
+            class="cmsy-10x-x-109">- </span><span
+            class="cmmi-10x-x-109">i </span><span
+            class="cmsy-10x-x-109">- </span>1))
+        </td>
+        <td
+          class="align-odd">(4)
+        </td>
+        <td
+          class="align-even"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label"></td>
+        <td
+          class="align-label"></td>
+      </tr>
+    </table>
+    Step (1) <span
+      class="cmsy-10x-x-109">&#x2192; </span>(2) is justified because, in the summation of all neighborhoods, every
+    vertex of degree <span
+      class="cmmi-10x-x-109">d</span>
+    will be counted exactly <span
+      class="cmmi-10x-x-109">d </span>times- once for each of its neighbors. So, each vertex of degree <span
+      class="cmmi-10x-x-109">d</span>
+    contributes (<span
+      class="cmmi-10x-x-109">d</span><sup><span
+      class="cmr-8">2</span></sup>) to the sum, and there are <span
+      class="cmmi-10x-x-109">n</span><sub><span
+      class="cmmi-8">d</span></sub> vertices of degree <span
+      class="cmmi-10x-x-109">d</span>.
+    <!--l. 149--><p class="noindent">Step (2) <span
+      class="cmsy-10x-x-109">&#x2192; </span>(3) is justified because, in the summation, the structure of <span
+      class="cmmi-10x-x-109">G </span>is irrelevant. All that
+      matters is how many vertices there are of a particular degree, as the <span
+        class="cmmi-10x-x-109">e</span>(<span
+        class="cmmi-10x-x-109">&#x2026;</span>) term will be identical for
+      all vertices of identical degree.
+      <!--l. 152-->
+    <p class="noindent">This second form (<span
+      class="cmsy-10x-x-109">*</span>) is helpful because it allows us to calculate <span
+      class="cmmi-10x-x-109">&#x03B3;</span>(<span
+      class="cmmi-10x-x-109">G</span>) from only the degree sequence
+      of <span
+        class="cmmi-10x-x-109">G</span>, rather than having to look at each neighborhood in <span
+        class="cmmi-10x-x-109">G </span>itself.
+  </li>
+  <li class="itemize"><span
+    class="cmmi-10x-x-109">n </span>= <span
+    class="cmex-10x-x-109">&#x2211;</span>
+    <sub><span
+      class="cmmi-8">i</span><span
+      class="cmr-8">=0</span></sub><sup><span
+      class="cmmi-8">k</span><span
+      class="cmsy-8">-</span><span
+      class="cmr-8">1</span></sup><span
+      class="cmmi-10x-x-109">n</span><sub><span
+      class="cmmi-8">i</span></sub>
+  </li>
+  <li class="itemize">2<span
+    class="cmmi-10x-x-109">e </span>= <span
+    class="cmex-10x-x-109">&#x2211;</span>
+    <sub><span
+      class="cmmi-8">i</span><span
+      class="cmr-8">=0</span></sub><sup><span
+      class="cmmi-8">k</span><span
+      class="cmsy-8">-</span><span
+      class="cmr-8">1</span></sup><span
+      class="cmmi-10x-x-109">in</span><sub><span
+      class="cmmi-8">i</span></sub>
+  </li>
+</ul>
+<!--l. 163--><p class="noindent">
+<h3 class="likesectionHead"><a
+  id="x1-4000"></a>There is a single (3<span
+  class="cmmi-10x-x-109">,</span>9;35) graph, and it is 8-regular with 140 edges</h3>
+<!--l. 165--><p class="noindent">Since <span
+  class="cmmi-10x-x-109">R</span>(3<span
+  class="cmmi-10x-x-109">,</span>9) = 36, we know there is some (3<span
+  class="cmmi-10x-x-109">,</span>9;35) graph, call it <span
+  class="cmmi-10x-x-109">G</span>. The most edges <span
+  class="cmmi-10x-x-109">G </span>can contain is 140:
+  if there were more, one vertex would have to be degree 9. This would entail an independent set of size 9,
+  since <span
+    class="cmmi-10x-x-109">G </span>is triangle free. So <span
+    class="cmmi-10x-x-109">G </span><span
+    class="cmsy-10x-x-109">&#x2208; </span><span
+    class="eusm-10x-x-109"><img
+    src="eusm10-52.png" alt="R" class="10-109x-x-52"/></span>(3<span
+    class="cmmi-10x-x-109">,</span>9;35<span
+    class="cmmi-10x-x-109">,</span>140 <span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">s</span>) for some <span
+    class="cmmi-10x-x-109">s </span><span
+    class="cmsy-10x-x-109">&#x2265; </span>0.
+  <!--l. 175-->
+<p class="noindent">We now show that <span
+  class="cmmi-10x-x-109">&#x03B4;</span>(<span
+  class="cmmi-10x-x-109">G</span>) <span
+  class="cmmi-10x-x-109">&#x003E; </span>6. Suppose there were some vertex <span
+  class="cmmi-10x-x-109">v </span>with degree 6 (or less). Then <span
+  class="cmmi-10x-x-109">G</span><sub><span
+  class="cmmi-8">v</span></sub> is a
+  (3<span
+    class="cmmi-10x-x-109">,</span>8;<span
+    class="cmsy-10x-x-109">&#x2265; </span>28) graph. But <span
+    class="cmmi-10x-x-109">R</span>(3<span
+    class="cmmi-10x-x-109">,</span>8) = 28, so this cannot be the case.
+
+
+  <!--l. 183-->
+<p class="noindent">So every vertex in <span
+  class="cmmi-10x-x-109">G </span>is either degree 7 or 8. Let there be <span
+  class="cmmi-10x-x-109">n</span><sub><span
+  class="cmr-8">7</span></sub> degree 7 vertices, and <span
+  class="cmmi-10x-x-109">n</span><sub><span
+  class="cmr-8">8</span></sub> degree 8 vertices. We
+  show that <span
+    class="cmmi-10x-x-109">n</span><sub><span
+    class="cmr-8">7</span></sub> = 2<span
+    class="cmmi-10x-x-109">s</span>. Since every edge is degree 7 or 8, the only way to have 140 edges is to have all
+  vertices
+  of degree 8. If <span
+    class="cmmi-10x-x-109">G </span>has fewer than 140 edges, some of these edges must be missing, and every missing
+  edge is
+  incident to 2 vertices, so <span
+    class="cmmi-10x-x-109">n</span><sub><span
+    class="cmr-8">7</span></sub> = 2<span
+    class="cmmi-10x-x-109">s</span>.
+  <!--l. 193-->
+<p class="noindent">Solving for (4), the only values for which <span
+  class="cmmi-10x-x-109">&#x03B3;</span>(<span
+  class="cmmi-10x-x-109">G</span>) is non-negative are <span
+  class="cmmi-10x-x-109">s </span>= 0<span
+  class="cmmi-10x-x-109">,</span>1<span
+  class="cmmi-10x-x-109">,</span>2<span
+  class="cmmi-10x-x-109">,</span>3<span
+  class="cmmi-10x-x-109">,</span>4. This shows that <span
+  class="cmmi-10x-x-109">G</span>
+  contains at least 136 edges.
+  <!--l. 197-->
+<p class="noindent">Let <span
+  class="cmmi-10x-x-109">H </span>be the graph induced in <span
+  class="cmmi-10x-x-109">G </span>by all <span
+  class="cmmi-10x-x-109">n</span><sub><span
+  class="cmr-8">7</span></sub> vertices of degree 7. Since <span
+  class="cmmi-10x-x-109">H </span>has 2<span
+  class="cmmi-10x-x-109">s </span>vertices, <span
+  class="cmmi-10x-x-109">&#x03B4;</span>(<span
+  class="cmmi-10x-x-109">H</span>) <span
+  class="cmsy-10x-x-109">&#x2264; </span><span
+  class="cmmi-10x-x-109">s</span>.
+  Therefore, in <span
+    class="cmmi-10x-x-109">G</span>, any degree 7 vertex is adjacent to at most <span
+    class="cmmi-10x-x-109">s </span>other degree 7 vertices.
+  <!--l. 203-->
+<p class="noindent">Suppose, for the sake of contradiction, that <span
+  class="cmmi-10x-x-109">n</span><sub><span
+  class="cmr-8">7</span></sub> <span
+  class="cmmi-10x-x-109">&#x003E; </span>0 (or, equivalently, that <span
+  class="cmmi-10x-x-109">s &#x003E; </span>0). Let <span
+  class="cmmi-10x-x-109">v </span>be some vertex of
+  degree 7. Then <span
+    class="cmmi-10x-x-109">Z</span>(<span
+    class="cmmi-10x-x-109">v</span>) <span
+    class="cmsy-10x-x-109">&#x2265; </span>7<span
+    class="cmmi-10x-x-109">s </span>+ 8(7 <span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">s</span>) = 56 <span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">s</span>, where <span
+    class="cmmi-10x-x-109">s </span>is the number of degree 7 vertices adjacent
+  to <span
+    class="cmmi-10x-x-109">v</span>, and 7 <span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">s </span>the number of degree 8 vertices adjacent to <span
+    class="cmmi-10x-x-109">v</span>. Also, the number of edges in
+  <span
+    class="cmmi-10x-x-109">G</span><sub><span
+    class="cmmi-8">v</span></sub> <span
+    class="cmsy-10x-x-109">&#x2264; </span>(140 <span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">s</span>) <span
+    class="cmsy-10x-x-109">- </span>(56 <span
+    class="cmsy-10x-x-109">- </span><span
+    class="cmmi-10x-x-109">s</span>) = 84. However, <span
+    class="cmmi-10x-x-109">G</span><sub><span
+    class="cmmi-8">v</span></sub> is a (3<span
+    class="cmmi-10x-x-109">,</span>8;27) graph and <span
+    class="cmmi-10x-x-109">e</span>(3<span
+    class="cmmi-10x-x-109">,</span>8<span
+    class="cmmi-10x-x-109">,</span>27) = 85 (found
+  using mtf method). Therefore, <span
+    class="cmmi-10x-x-109">n</span><sub><span
+    class="cmr-8">7</span></sub> = 0, i.e. every vertex in <span
+    class="cmmi-10x-x-109">G </span>is degree 8, and <span
+    class="cmmi-10x-x-109">G </span>contains 140
+  edges.
+  <!--l. 216-->
+<p class="noindent">For any vertex <span
+  class="cmmi-10x-x-109">v </span>in <span
+  class="cmmi-10x-x-109">G</span>, <span
+  class="cmmi-10x-x-109">G</span><sub><span
+  class="cmmi-8">v</span></sub> is a (3<span
+  class="cmmi-10x-x-109">,</span>8;26<span
+  class="cmmi-10x-x-109">,</span>76) graph. Using neighborhood gluing, the authors reconstruct
+  every (3<span
+    class="cmmi-10x-x-109">,</span>9;35;140) graph from each (3<span
+    class="cmmi-10x-x-109">,</span>8;26<span
+    class="cmmi-10x-x-109">,</span>76) graph (found using mtf method), and show that all
+  constructed graphs are isomorphic. Therefore, there is a unique (up to isomorphism) 8-regular (3<span
+    class="cmmi-10x-x-109">,</span>9;35)
+  graph, and it contains 140 edges.
+  <!--l. 221-->
+<p class="noindent">The graph is a cyclic graph on 35 vertices with circular distances <span
+  class="cmsy-10x-x-109">{</span>1<span
+  class="cmmi-10x-x-109">,</span>7<span
+  class="cmmi-10x-x-109">,</span>11<span
+  class="cmmi-10x-x-109">,</span>16<span
+  class="cmsy-10x-x-109">}</span>.
+
+</body>
+</html>

@@ -1,3 +1,21 @@
-<h1>
-  {{title}}
-</h1>
+<div class=" mat-app-background" fxLayout="column" fxFill>
+  <div>
+    <div class="nav-bar" fxLayout="row">
+      <h4 style="margin: 0" fxLayoutAlign="center center" fxFlexOffset="15px">R(3,10) Project</h4>
+      <nav md-tab-nav-bar fxFlex fxLayout="row" fxFlexOffset="20px">
+        <div fxLayoutAlign="start center">
+          <a md-tab-link
+             *ngFor="let link of navLinks; let i = index"
+             [routerLink]="link.route"
+             [active]="activeLinkIndex === i"
+             (click)="activeLinkIndex = i">
+            <span fxFill fxLayoutAlign="center center">{{link.label}}</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="dark-text" fxFlex>
+    <router-outlet></router-outlet>
+  </div>
+</div>

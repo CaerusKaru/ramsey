@@ -1,0 +1,55 @@
+<div style="padding: 32px; background-color: #E0E0E0" fxLayout="column">
+  <div fxLayout="row" fxLayoutWrap fxLayoutAlign="start center">
+    <md-card style="width: 300px">
+      <pdf-viewer src="./assets/pdfs/exoo.pdf"
+                  page="1"
+                  [original-size]="false" style="display: block;"></pdf-viewer>
+      <div fxLayout="row">
+        <span style="padding: 10px 0 10px 0">Exoo</span>
+        <span fxFlex></span>
+        <button md-button (click)="downloadFile('./assets/pdfs/exoo.pdf')">
+          DOWNLOAD
+        </button>
+      </div>
+    </md-card>
+    <span fxFlex="50px"></span>
+    <md-card style="width: 300px">
+      <pdf-viewer src="./assets/pdfs/goedgebeur.pdf"
+                  page="1"
+                  [original-size]="false" style="display: block;"></pdf-viewer>
+      <div fxLayout="row">
+        <span style="padding: 10px 0 10px 0">Goedgebeur, et al.</span>
+        <span fxFlex></span>
+        <button md-button (click)="downloadFile('./assets/pdfs/goedgebeur.pdf')">
+          DOWNLOAD
+        </button>
+      </div>
+    </md-card>
+    <span fxFlex="50px"></span>
+    <md-card style="width: 300px">
+      <pdf-viewer src="./assets/pdfs/spencer.pdf"
+                  page="1"
+                  [original-size]="false" style="display: block;"></pdf-viewer>
+      <div fxLayout="row">
+        <span style="padding: 10px 0 10px 0">Spencer</span>
+        <span fxFlex></span>
+        <button md-button (click)="downloadFile('./assets/pdfs/spencer.pdf')">
+          DOWNLOAD
+        </button>
+      </div>
+    </md-card>
+    <span fxFlex="50px"></span>
+    <md-card style="width: 300px">
+      <pdf-viewer src="./assets/pdfs/RamseyPres.pdf"
+                  page="1"
+                  [original-size]="false" style="display: block;"></pdf-viewer>
+      <div fxLayout="row">
+        <span style="padding: 10px 0 10px 0">Upper Bound Presentation</span>
+        <span fxFlex></span>
+        <button md-button (click)="downloadFile('./assets/pdfs/RamseyPres.pdf')">
+          DOWNLOAD
+        </button>
+      </div>
+    </md-card>
+  </div>
+</div>
