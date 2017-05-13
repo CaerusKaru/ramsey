@@ -1,28 +1,13 @@
 # Ramsey
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+This project was a collaboration between David Stalfa and Adam Plumer for COMP 150-ADG at Tufts University
 
-## Development server
+### Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This repository is for a web frontend written in Angular v4 to break down research on the upper bound
+for the [Ramsey number](https://en.wikipedia.org/wiki/Ramsey%27s_theorem#Ramsey_numbers) R(3, 10).
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The website contains a detailed walkthrough of the latest research and the theorems that support this research,
+with detailed visuals and analysis. The website also contains links to the research and a presentation given
+for the class. Finally, the website contains some animated examples of the methods and algorithms used in finding
+the upper bound for R(3, 10), like the Maximal Triangle Free (MTF) method.
