@@ -41,6 +41,24 @@ export class MTFComponent implements OnInit {
     this.initGraph();
   }
 
+  /*
+
+  function MTF () {
+    1) generate n unconnected vertices in G <-- DONE
+    2) Add edge e to G if it doesn't form a 3-cycle
+    3) Repeat 2 to exhaustion
+    4) Check if it's k-independent, if not backtrack
+       edge and find new G
+    5) Run Gen_MTF(G)
+  }
+
+  function Gen_MTF (G) {
+    1) Remove an edge e from G, store in G'
+    2) Gen_MTF(G')
+    3) If no k-ind set, output G'
+  }
+   */
+
   private initGraph () {
     const snackbar = this.snackbar.open('Loading graph...');
     const nodesArray = [];
