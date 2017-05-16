@@ -20,8 +20,12 @@ let uniqueId = 0;
 })
 export class NavMenuLinkComponent {
 
-  @Input() link : string;
-  @Input() id : number = uniqueId++;
+  @Input() link: string;
+  @Input() id: number = uniqueId++;
+
+  public isSelected: Observable<boolean> = this.menuService.openPage.map(i => i === this.id);
+
+  private _isSelected: boolean;
 
   constructor(
     private router: Router,
@@ -30,13 +34,9 @@ export class NavMenuLinkComponent {
     menuService.openPage.subscribe(data => this._isSelected = data === this.id);
   }
 
-  public isSelected : Observable<boolean> = this.menuService.openPage.map(i => i === this.id);
-
-  navigate(url) {
+  public navigate(url) {
     this.router.navigate([url]);
   }
-
-  private _isSelected : boolean;
 }
 
 @Component({
@@ -57,22 +57,25 @@ export class NavMenuLinkComponent {
         visibility: 'visible'
       })),
       transition('void => false', animate(0, style({ height: 0 }))),
-      transition('* => *', animate('750ms cubic-bezier(1.35, 1, 1.25, 1)'))
+      transition('* => *', animate('750ms cubic-bezier(0.35, 1, 0.25, 1)'))
     ])
   ],
   encapsulation: ViewEncapsulation.None
 })
 export class NavMenuToggleComponent implements AfterViewInit, OnDestroy {
 
-  @Input () label : string;
-  @Input () id : number = uniqueId++;
-  @ContentChildren(NavMenuLinkComponent) links : QueryList<NavMenuLinkComponent>;
+  @Input () label: string;
+  @Input () id: number = uniqueId++;
+  @ContentChildren(NavMenuLinkComponent) links: QueryList<NavMenuLinkComponent>;
+
+  private _finalLinks: NavMenuLinkComponent[];
+  private _openSection: boolean;
 
   constructor(
     private menuService: NavMenuService
   ) {
     menuService.openSection.subscribe(data => {
-      this._openSection = data == this.id;
+      this._openSection = data === this.id;
     });
   }
 
@@ -93,9 +96,6 @@ export class NavMenuToggleComponent implements AfterViewInit, OnDestroy {
   public toggle ()  {
     this.menuService.toggleSelectSection(this.id);
   }
-
-  private _finalLinks : NavMenuLinkComponent[];
-  private _openSection : boolean;
 
   private initLinks () {
     this._finalLinks.map(c => this.menuService.addLink(c.id, c.link, this.id));

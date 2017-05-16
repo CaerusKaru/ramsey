@@ -2,22 +2,28 @@
   <md-card>
     <md-card-header>
       <md-card-title>
-        <h3>R (3, k) => mtf graph generator</h3>
+        <h3>R (3, k, n) => mtf graph generator</h3>
       </md-card-title>
     </md-card-header>
     <md-card-content>
-      <div fxLayout="row"  style="width: 65px;">
-        <md-input-container>
-          <input mdInput type="number" [(ngModel)]="adjust" placeholder="k Value">
+      <div fxLayout="row">
+        <md-input-container style="width: 80px">
+          <input mdInput type="number" [(ngModel)]="kIndNum" placeholder="k Value">
         </md-input-container>
+        <span fxFlex="20px"></span>
+        <md-input-container style="width: 80px">
+          <input mdInput type="number" [(ngModel)]="nLinkNum" placeholder="n Value">
+        </md-input-container>
+        <span fxFlex="20px"></span>
+        <button md-button (click)="changeGraph()">GO</button>
       </div>
       <div>
-        <button md-button (click)="changeGraph()">GO</button>
+        <span>Number of mtf graphs generated: {{mtfGraphs.length}}</span>
       </div>
     </md-card-content>
   </md-card>
   <span fxFlex="25px"></span>
   <md-card fxFlex>
-    <div #container></div>
+    <div #container id="container"></div>
   </md-card>
 </div>

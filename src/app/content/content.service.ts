@@ -68,18 +68,18 @@ export class ContentService {
 
   public nextSnippet () {
     if (this.validState(this.currentSec, this.currentSub, this.currentState + 1)) {
-      console.log('next state');
       this._snippets.next(this._snippets.getValue().concat(...[this.httpString(this.currentSec, this.currentSub,
         this.currentState + 1)]));
       this.currentState += 1;
     } else if (this.validState(this.currentSec, this.currentSub + 1, 0)) {
-      console.log('next sub');
       this._snippets.next([this.httpString(this.currentSec, this.currentSub + 1, 0)]);
       this.currentSub += 1;
       this.currentState = 0;
       this.router.navigate(['/section', this.currentSec, this.currentSub]);
     } else {
-      console.log('next sec');
+      if (!this.validState(this.currentSec + 1, 0, 0)) {
+        return;
+      }
       this.currentState = 0;
       this.router.navigate(['/section', this.currentSec + 1, 0]);
     }
@@ -88,7 +88,6 @@ export class ContentService {
   public prevSnippet () {
     if (this.validState(this.currentSec, this.currentSub, this.currentState - 1)) {
       console.log('prev state');
-      console.log(this.currentState - 1);
       this._snippets.next(this._snippets.getValue().slice(0, -1));
       this.currentState -= 1;
     } else if (this.validState(this.currentSec, this.currentSub - 1, 0)) {
